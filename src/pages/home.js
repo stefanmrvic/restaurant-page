@@ -1,16 +1,7 @@
-import { clearPage } from "../index.js"
-
-function createElement(ele, className = null, text = null) {
-    const element = document.createElement(ele);
-    if (text) element.textContent = text;
-    if (className) element.classList.add(className);
-   
-    return element;
-}
-
+import { clearChildren, createElement } from "../utils/dom";
 
 export function generateHome() {
-    clearPage();
+    clearChildren();
 
     const divContent = document.getElementById('content');
 
