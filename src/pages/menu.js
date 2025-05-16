@@ -1,8 +1,6 @@
-import { clearChildren, createElement } from "../utils/dom.js";
+import { createElement } from "../utils/dom.js";
 
 export function generateMenu() {
-    clearChildren();
-
     const divContent = document.getElementById('content');
 
     const divPageName = createElement("div", "page-name");
@@ -37,6 +35,5 @@ export function generateMenu() {
     const pMenuLocationText = createElement("p", "menu__location__text", "Space Station - Mars");
     
     divMenuLocation.append(h2MenuLocationHeadline, pMenuLocationText);
-
     divContent.append(divPageName, divMenuIntro, divMenuHours, divMenuLocation);
 }

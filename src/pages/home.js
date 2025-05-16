@@ -1,10 +1,7 @@
-import { clearChildren, createElement } from "../utils/dom";
+import { createElement } from "../utils/dom";
 
 export function generateHome() {
-    clearChildren();
-
     const divContent = document.getElementById('content');
-
     const divPageName = createElement("div", "page-name");
     const h1PageHeading = createElement("h1", "page-heading", "Pixel Ramen Shack");
 
@@ -37,6 +34,5 @@ export function generateHome() {
     const pHomeLocationText = createElement("p", "home__location__text", "21 West 52nd Street");
     
     divHomeLocation.append(h2HomeLocationHeadline, pHomeLocationText);
-
     divContent.append(divPageName, divHomeIntro, divHomeHours, divHomeLocation);
 }

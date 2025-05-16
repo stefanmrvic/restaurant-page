@@ -1,8 +1,6 @@
-import { clearChildren, createElement } from "../utils/dom";
+import { createElement } from "../utils/dom";
 
 export function generateContact() {
-    clearChildren();
-
     const divContent = document.getElementById('content');
 
     const divPageName = createElement("div", "page-name");
@@ -34,6 +32,5 @@ export function generateContact() {
     const pContactLocationText = createElement("p", "contact__location__text", "You already know man, stop fooling around!");
     
     divContactLocation.append(h2ContactLocationHeadline, pContactLocationText);
-
     divContent.append(divPageName, divContactIntro, divContactLocation);
 }
